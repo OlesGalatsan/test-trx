@@ -24,9 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Show test results old
-        uses: OlesGalatsan/test-reporting@features/increase-summary-limit
+        uses: OlesGalatsan/test-reporter@features/increase-summary-limit
         with:
           name: 'Dotnet tests report'
           path: ./TestResults/*.trx
           reporter: dotnet-trx
-          output-to: 'step-summary'
+          use-actions-summary: 'true'
